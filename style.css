@@ -20,13 +20,10 @@ body {
     color: var(--text-color);
 }
 
-<<<<<<< HEAD
-=======
 .imgsir{
     border-radius: 50%;
 }
 
->>>>>>> 2f9fbca (Added Emailjs For Query Form)
 /* Header and Navigation */
 header {
     position: fixed;
