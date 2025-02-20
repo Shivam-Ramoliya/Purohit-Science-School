@@ -29,10 +29,8 @@ header {
     background: rgba(44, 62, 80, 0.9);
     align-items: center;
     height: 120px;
-    /* Reduced height */
     padding: 5px 5%;
-    /* Reduced padding */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 1);
 }
 
 #main-nav {
@@ -40,7 +38,6 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 0.5rem 5%;
-    /* Adjusted padding */
     max-width: 1400px;
     margin: 0 auto;
 }
@@ -68,7 +65,6 @@ header {
 
 .school-name {
     font-size: 2rem;
-    /* Reduced font size */
     font-weight: bold;
     color: var(--white);
     transition: color 0.3s ease;
@@ -101,7 +97,6 @@ header {
 /* Fix Overlapping Sections */
 section {
     scroll-margin-top: 55px;
-    /* Prevents content from being hidden under fixed header */
 }
 
 /* Hero Section */
@@ -208,18 +203,67 @@ section {
     background: var(--white);
     padding: 2rem;
     border-radius: 10px;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
     transition: transform 0.3s ease;
 }
 
 .stream-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.7);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 1);
 }
 
 .stream-card h3 {
+    text-align: center;
+    font-size: 1.5rem;
     color: var(--primary-color);
     margin-bottom: 1rem;
+}
+
+/* about Section */
+.about-grid {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.about-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: var(--white);
+    width: 100%;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.about-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 1);
+}
+
+.about-card h3 {
+    text-align: center;
+    font-size: 1.75rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.about-card{
+    text-align: justify;
+    font-weight: bold;
+}
+
+/* Responsive: Stack on smaller screens */
+@media (max-width: 768px) {
+    .about-grid {
+        grid-template-columns: 1fr;
+    }
 }
 
 /* People Section */
@@ -235,7 +279,7 @@ section {
     padding: 2rem;
     background: var(--white);
     border-radius: 10px;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     cursor: pointer;
     width: 350px;
@@ -243,7 +287,7 @@ section {
 
 .people-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.8);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.9);
 }
 
 .people-card img {
@@ -265,7 +309,7 @@ section {
     padding: 2rem;
     background: var(--white);
     border-radius: 10px;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     cursor: pointer;
     width: 250px;
@@ -274,7 +318,7 @@ section {
 
 .people-card2:hover {
     transform: translateY(-5px);
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.8);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.9);
 }
 
 .people-card2 img {
@@ -548,7 +592,7 @@ a:hover svg {
     padding: 2rem;
     background-color: #f9f9f9;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.9);
 }
 
 .people-branch h3 {
@@ -565,7 +609,7 @@ a:hover svg {
     padding: 2rem;
     background-color: #f9f9f9;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.9);
 }
 
 .alumni-branch h3 {
