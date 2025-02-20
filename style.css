@@ -578,10 +578,22 @@ a:hover svg {
 }
 
 .alumni-branch img {
-    width: auto;
+    width: 100%;
     max-width: 1100px;
     height: auto;
     border-radius: 10px;
     display: block;
     margin: 0 auto;
+    object-fit: cover;
+}
+
+@media (max-width: 768px) {
+    .alumni-branch {
+        padding: 1rem;
+    }
+
+    .alumni-branch img {
+        width: 100%;
+        height: auto;
+    }
 }
