@@ -230,6 +230,16 @@ section {
     margin: 0 auto;
 }
 
+.about2-grid {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
 .about-card {
     display: flex;
     flex-direction: column;
@@ -328,6 +338,31 @@ section {
     border-radius: 50%;
     border: 5px solid var(--primary-color);
     margin-bottom: 1rem;
+}
+
+.people-card3 {
+    text-align: center;
+    text-transform: uppercase;
+    padding: 2rem;
+    background: var(--white);
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    width: 350px;
+}
+
+.people-card3:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.9);
+}
+
+.people-card3 img {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    margin-bottom: 1.5rem;
+    border: 5px solid #000;
 }
 
 /* Contact Section */
