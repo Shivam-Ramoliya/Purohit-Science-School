@@ -28,7 +28,8 @@ header {
     z-index: 1000;
     background: rgba(44, 62, 80, 0.9);
     align-items: center;
-    height: 120px;
+    min-height: 120px;
+    height: auto;
     padding: 5px 5%;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 1);
 }
