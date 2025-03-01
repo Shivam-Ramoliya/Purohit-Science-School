@@ -59,6 +59,23 @@
             const mobileNav = document.getElementById("mobile-nav");
             mobileNav.classList.toggle("active");
         }
+
+        // Close menu when clicking on any link inside it
+        document.querySelectorAll("#mobile-nav a").forEach(item => {
+            item.addEventListener("click", () => {
+                document.getElementById("mobile-nav").classList.remove("active");
+            });
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener("click", (event) => {
+            const mobileNav = document.getElementById("mobile-nav");
+            const mobileMenu = document.querySelector(".mobile-menu");
+
+            if (!mobileNav.contains(event.target) && !mobileMenu.contains(event.target)) {
+                mobileNav.classList.remove("active");
+            }
+        });
     </script>
 
     <main>
@@ -156,8 +173,8 @@
                 </div>
                 <div class="people-card" data-page="alumni.html">
                     <img src="images/alumni-icon.jpeg" alt="Alumni">
-                    <h3>Alumni</h3>
-                    <p>See the success stories of our alumni.</p>
+                    <h3>Success Stories</h3>
+                    <p>See the success stories of our Shining Stars.</p>
                 </div>
             </div>
         </section>
