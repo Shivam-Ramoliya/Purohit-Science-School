@@ -1,7 +1,9 @@
 document.addEventListener("DOMContentLoaded", () => {
+
     // Mobile Menu Toggle
     const mobileMenu = document.querySelector(".mobile-menu");
     const navLinks = document.querySelector(".nav-links");
+    const navItems = document.querySelectorAll(".nav-links a");
 
     if (mobileMenu) {
         mobileMenu.addEventListener("click", () => {
@@ -9,16 +11,16 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    // Smooth Scrolling for Navigation Links with Offset to prevent hiding under header
+    // Smooth Scrolling for Navigation Links with Offset
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener("click", function (e) {
             e.preventDefault();
 
             const target = document.querySelector(this.getAttribute("href"));
             if (target) {
-                const headerOffset = document.querySelector("header").offsetHeight; // Get header height
+                const headerOffset = document.querySelector("header").offsetHeight;
                 const elementPosition = target.getBoundingClientRect().top + window.scrollY;
-                const offsetPosition = elementPosition - headerOffset + 65; // Adjust -20px for extra spacing
+                const offsetPosition = elementPosition - headerOffset + 65;
 
                 window.scrollTo({
                     top: offsetPosition,
@@ -26,21 +28,18 @@ document.addEventListener("DOMContentLoaded", () => {
                 });
 
                 // Close mobile menu after clicking a link (for mobile users)
-                document.querySelector(".nav-links").classList.remove("active");
+                navLinks.classList.remove("active");
             }
         });
     });
 
-
     // Active Navigation Link Highlight on Scroll
     const sections = document.querySelectorAll("section");
-    const navItems = document.querySelectorAll(".nav-links a");
 
     window.addEventListener("scroll", () => {
         let current = "";
         sections.forEach(section => {
             const sectionTop = section.offsetTop - 55;
-            const sectionHeight = section.clientHeight;
             if (pageYOffset >= sectionTop - 60) {
                 current = section.getAttribute("id");
             }
@@ -54,13 +53,12 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
-
     // People Section - Redirect on Click
     document.querySelectorAll(".people-card").forEach(card => {
         card.addEventListener("click", function () {
             let page = this.getAttribute("data-page");
             if (page) {
-                window.location.href = page; // Redirect to the correct page
+                window.location.href = page;
             }
         });
     });
@@ -86,4 +84,5 @@ document.addEventListener("DOMContentLoaded", () => {
         section.classList.add("fade-out");
         observer.observe(section);
     });
+
 });
