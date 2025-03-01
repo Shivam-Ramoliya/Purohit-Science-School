@@ -52,6 +52,23 @@
             const mobileNav = document.getElementById("mobile-nav");
             mobileNav.classList.toggle("active");
         }
+
+        // Close menu when clicking on any link inside it
+        document.querySelectorAll("#mobile-nav a").forEach(item => {
+            item.addEventListener("click", () => {
+                document.getElementById("mobile-nav").classList.remove("active");
+            });
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener("click", (event) => {
+            const mobileNav = document.getElementById("mobile-nav");
+            const mobileMenu = document.querySelector(".mobile-menu");
+
+            if (!mobileNav.contains(event.target) && !mobileMenu.contains(event.target)) {
+                mobileNav.classList.remove("active");
+            }
+        });
     </script>
 
     <main>
