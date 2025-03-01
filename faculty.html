@@ -52,6 +52,23 @@
             const mobileNav = document.getElementById("mobile-nav");
             mobileNav.classList.toggle("active");
         }
+
+        // Close menu when clicking on any link inside it
+        document.querySelectorAll("#mobile-nav a").forEach(item => {
+            item.addEventListener("click", () => {
+                document.getElementById("mobile-nav").classList.remove("active");
+            });
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener("click", (event) => {
+            const mobileNav = document.getElementById("mobile-nav");
+            const mobileMenu = document.querySelector(".mobile-menu");
+
+            if (!mobileNav.contains(event.target) && !mobileMenu.contains(event.target)) {
+                mobileNav.classList.remove("active");
+            }
+        });
     </script>
 
     <main>
@@ -67,7 +84,12 @@
                     <div class="people-card2">
                         <img src="images/NBsir.jpg" alt="Bhanderi Nayan Sir">
                         <h3>Bhanderi Nayan Sir</h3>
-                        <p>B.E.(Mech)<br><br><b>Physics</b>, Auther of Book "Physics Photons".</p>
+                        <p>B.E.(Mech)<br><br><b>Physics</b>, Auther of Book
+                            <a href="images/NBsirBook.jpg" target="_blank" rel="noopener noreferrer">
+                                "Physics Photons"
+                            </a>
+                            .
+                        </p>
                     </div>
                     <div class="people-card2">
                         <img src="images/DRsir.jpg" alt="Rathod Dharmendra Sir">
@@ -82,8 +104,13 @@
                     <div class="people-card2">
                         <img src="images/VMsir.jpg" alt="Munjapara Vishal Sir">
                         <h3>Munjapara Vishal Sir</h3>
-                        <p>M.sc., B.Ed. <br><br><b>Biology</b>, Auther of Book "Objective Biology for Neet
-                            (Bioluminescence).</p>
+                        <p>M.sc., B.Ed. <br><br><b>Biology</b>, Auther of Book
+                            <a href="https://eluckybookstore.com/p/objective-biology-for-neet-gujarati-2nd-edition-2023-by-bioluminescence-pub-ChZDkC"
+                                target="_blank" rel="noopener noreferrer">
+                                "Objective Biology for Neet (Bioluminescence)"
+                            </a>
+                            .
+                        </p>
                     </div>
                     <div class="people-card2">
                         <img src="images/RVsir.jpg" alt="Vadodariya Rajesh Sir">
@@ -113,7 +140,12 @@
                     <div class="people-card2">
                         <img src="images/NBsir.jpg" alt="Bhanderi Nayan Sir">
                         <h3>Bhanderi Nayan Sir</h3>
-                        <p>B.E.(Mech)<br><br><b>Physics</b>, Auther of Book "Physics Photons".</p>
+                        <p>B.E.(Mech)<br><br><b>Physics</b>, Auther of Book
+                            <a href="images/NBsirBook.jpg" target="_blank" rel="noopener noreferrer">
+                                "Physics Photons"
+                            </a>
+                            .
+                        </p>
                     </div>
                     <!--<div class="people-card2">
                         <img src="images/BLsir.jpg" alt="B L Sir">
@@ -133,8 +165,13 @@
                     <div class="people-card2">
                         <img src="images/VMsir.jpg" alt="Munjapara Vishal Sir">
                         <h3>Munjapara Vishal Sir</h3>
-                        <p>M.sc., B.Ed. <br><br><b>Biology</b>, Auther of Book "Objective Biology for Neet
-                            (Bioluminescence)</p>
+                        <p>M.sc., B.Ed. <br><br><b>Biology</b>, Auther of Book
+                            <a href="https://eluckybookstore.com/p/objective-biology-for-neet-gujarati-2nd-edition-2023-by-bioluminescence-pub-ChZDkC"
+                                target="_blank" rel="noopener noreferrer">
+                                "Objective Biology for Neet (Bioluminescence)"
+                            </a>
+                            .
+                        </p>
                     </div>
                     <div class="people-card2">
                         <img src="images/JKsir.jpg" alt="Khakhariya Jitesh Sir">
