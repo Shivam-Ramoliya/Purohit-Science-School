@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="icon" type="image/png" href="images/utilities/logo2.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Staff | Purohit Science School</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <nav id="main-nav">
+            <div class="logo">
+                <a href="index.html"><img src="images/utilities/logo2.png" alt="School Logo">
+                    <span class="school-name">Purohit Science School, Jamnagar.<br>
+                        <h6>One Team, One Dream.</h6>
+                    </span></a>
+            </div>
+
+            <!-- Desktop Navigation -->
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#stars">Stars</a></li>
+                <li><a href="index.html#streams">Streams</a></li>
+                <li><a href="index.html#people">People</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+
+            <!-- Mobile Menu Button -->
+            <div class="mobile-menu" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <!-- Mobile Navigation -->
+            <div class="mobile-nav" id="mobile-nav">
+                <a href="index.html">Home</a>
+                <a href="index.html#about">About</a>
+                <a href="index.html#stars">Stars</a>
+                <a href="index.html#streams">Streams</a>
+                <a href="index.html#people">People</a>
+                <a href="index.html#contact">Contact</a>
+            </div>
+        </nav>
+    </header>
+
+    <script>
+        function toggleMenu() {
+            const mobileNav = document.getElementById("mobile-nav");
+            mobileNav.classList.toggle("active");
+        }
+
+        // Close menu when clicking on any link inside it
+        document.querySelectorAll("#mobile-nav a").forEach(item => {
+            item.addEventListener("click", () => {
+                document.getElementById("mobile-nav").classList.remove("active");
+            });
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener("click", (event) => {
+            const mobileNav = document.getElementById("mobile-nav");
+            const mobileMenu = document.querySelector(".mobile-menu");
+
+            if (!mobileNav.contains(event.target) && !mobileMenu.contains(event.target)) {
+                mobileNav.classList.remove("active");
+            }
+        });
+    </script>
+
+    <main>
+        <section id="staff" class="section">
+            <h2>Meet Our Staff</h2>
+            <div class="people-branch">
+                <div class="people-grid2">
+                    <div class="people-card2">
+                        <img src="images/People/KalpeshGsir.jpeg" alt="Ghavariya Kalpesh Sir">
+                        <h3>Ghavariya Kalpesh Sir</h3>
+                        <p>B.E. (Mech) <br><br><b>Trustee</b>
+                        </p>
+                    </div>
+
+                    <div class="people-card2">
+                        <img src="images/People/GauravDsir.jpg" alt="Detholia Gaurav Sir">
+                        <h3>Detholia Gaurav Sir</h3>
+                        <p>M.B.A HR (Adam Smith Univercity, USA) <br><br><b>H.O.D. (Head Office)</b>
+                        </p>
+                    </div>
+
+                    <div class="people-card2">
+                        <img src="images/People/AmitPsir.jpeg" alt="Paun Amit Sir">
+                        <h3>Paun Amit Sir</h3>
+                        <p>M.A./ B.Ed. <br><br><b>Head Of Management</b>
+                        </p>
+                    </div>
+
+                    <div class="people-card2">
+                        <img src="images/People/PrasantVsir.jpeg" alt="Vyas Prasant Sir">
+                        <h3>Vyas Prasant Sir</h3>
+                        <p>M.Com. (Mech) <br><br><b>H.O.D. (Samarpan Branch)</b>
+                        </p>
+                    </div>
+
+                    <div class="people-card2">
+                        <img src="images/People/PankajAsir.jpeg" alt="Anadani Pankaj Sir">
+                        <h3>Anadani Pankaj Sir</h3>
+                        <p>M.Sc. <br><br><b>H.O.D. (Sunshine Branch)</b>
+                        </p>
+                    </div>
+
+                    <div class="people-card2">
+                        <img src="images/People/JituAsir.jpeg" alt="Agravat Jitendra Sir">
+                        <h3>Agravat Jitendra Sir</h3>
+                        <p>M.A./ B.Ed. <br><br><b>H.O.D. Commerce & Principal</b>
+                        </p>
+                    </div>
+
+                    <div class="people-card2">
+                        <img src="images/People/JaypalCsir.jpeg" alt="Chauhan Jaypalsinh Sir">
+                        <h3>Chauhan Jaypalsinh Sir</h3>
+                        <p>B.Sc./ B.Ed. <br><br><b>H.O.D. (Secondary)</b>
+                        </p>
+                    </div>
+
+                    <div class="people-card2">
+                        <img src="images/People/ManishJsir.jpeg" alt="Joshi Manish Sir">
+                        <h3>Joshi Manish Sir</h3>
+                        <p>M.A./ B.Ed. <br><br><b>H.O.D. (Primary)</b>
+                        </p>
+                    </div>
+
+                    <div class="people-card2">
+                        <img src="images/People/TaslimMaamB.jpeg" alt="Taslim Bloch Ma'am">
+                        <h3>Taslim Bloch Ma'am</h3>
+                        <p>M.A./ B.Ed. <br><br><b>Principal (Samarpan Branch)</b>
+                        </p>
+                    </div>
+
+                    <div class="people-card2">
+                        <img src="images/People/KaranNsir.jpeg" alt="Naria Karan Sir">
+                        <h3>Naria Karan Sir</h3>
+                        <p>B.Sc. <br><br><b>Admin Head (Head Office and Samarpan Branch)</b>
+                        </p>
+                    </div>
+
+                    <div class="people-card2">
+                        <img src="images/People/JaydeepCsir.jpeg" alt="Chudasama Jaydeep Sir">
+                        <h3>Chudasama Jaydeep Sir</h3>
+                        <p>B.Sc. <br><br><b>Admin Head (Sunshine Branch)</b>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Purohit Science School. All rights reserved.</p>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+
+</html>

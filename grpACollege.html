@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="icon" type="image/png" href="images/utilities/logo2.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Shining Stars | Purohit Science School</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <nav id="main-nav">
+            <div class="logo">
+                <a href="index.html"><img src="images/utilities/logo2.png" alt="School Logo">
+                    <span class="school-name">Purohit Science School, Jamnagar.<br>
+                        <h6>One Team, One Dream.</h6>
+                    </span></a>
+            </div>
+
+            <!-- Desktop Navigation -->
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#stars">Stars</a></li>
+                <li><a href="index.html#streams">Streams</a></li>
+                <li><a href="index.html#people">People</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+
+            <!-- Mobile Menu Button -->
+            <div class="mobile-menu" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <!-- Mobile Navigation -->
+            <div class="mobile-nav" id="mobile-nav">
+                <a href="index.html">Home</a>
+                <a href="index.html#about">About</a>
+                <a href="index.html#stars">Stars</a>
+                <a href="index.html#streams">Streams</a>
+                <a href="index.html#people">People</a>
+                <a href="index.html#contact">Contact</a>
+            </div>
+        </nav>
+    </header>
+
+    <script>
+        function toggleMenu() {
+            const mobileNav = document.getElementById("mobile-nav");
+            mobileNav.classList.toggle("active");
+        }
+
+        // Close menu when clicking on any link inside it
+        document.querySelectorAll("#mobile-nav a").forEach(item => {
+            item.addEventListener("click", () => {
+                document.getElementById("mobile-nav").classList.remove("active");
+            });
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener("click", (event) => {
+            const mobileNav = document.getElementById("mobile-nav");
+            const mobileMenu = document.querySelector(".mobile-menu");
+
+            if (!mobileNav.contains(event.target) && !mobileMenu.contains(event.target)) {
+                mobileNav.classList.remove("active");
+            }
+        });
+    </script>
+
+    <main>
+        <section id="engineering-admissions" class="section">
+            <h2>Highlights of Admission in Top Most Engineering Institutes</h2>
+        
+            <div class="admission-grid">
+                <!-- IIT -->
+                <div class="admission-card"><img src="images/Engineering/IITROORKEE.jpg" alt="IIT Roorkee"></div>
+        
+                <!-- NIT -->
+                <div class="admission-card"><img src="images/Engineering/NITSILCHAR1.jpg" alt="NIT Silchar"></div>
+
+                <!-- IIIT -->
+                <div class="admission-card"><img src="images/Engineering/IIITAP1.jpg" alt="IIIT Andhra Pradesh"></div>
+                <div class="admission-card"><img src="images/Engineering/IIITSURAT1.jpg" alt="IIIT Surat"></div>
+
+                <!-- DAIICT -->
+                <div class="admission-card"><img src="images/Engineering/DAIICT1.jpg" alt="DAIICT"></div>
+                <div class="admission-card"><img src="images/Engineering/DAIICT2.jpg" alt="DAIICT"></div>
+                <div class="admission-card"><img src="images/Engineering/DAIICT3.jpg" alt="DAIICT"></div>
+                <div class="admission-card"><img src="images/Engineering/DAIICT4.jpg" alt="DAIICT"></div>
+                <div class="admission-card"><img src="images/Engineering/DAIICT5.jpg" alt="DAIICT"></div>
+                <div class="admission-card"><img src="images/Engineering/DAIICT6.jpg" alt="DAIICT"></div>
+                <div class="admission-card"><img src="images/Engineering/DAIICT7.jpg" alt="DAIICT"></div>
+                <div class="admission-card"><img src="images/Engineering/DAIICT8.jpg" alt="DAIICT"></div>
+                <div class="admission-card"><img src="images/Engineering/DAIICT9.jpg" alt="DAIICT"></div>
+                <div class="admission-card"><img src="images/Engineering/DAIICT10.jpg" alt="DAIICT"></div>
+        
+                <!-- NIRMA -->
+                <div class="admission-card"><img src="images/Engineering/NIRMA1.jpg" alt="NIRMA"></div>
+                <div class="admission-card"><img src="images/Engineering/NIRMA2.jpg" alt="NIRMA"></div>
+                <div class="admission-card"><img src="images/Engineering/NIRMA3.jpg" alt="NIRMA"></div>
+                <div class="admission-card"><img src="images/Engineering/NIRMA4.jpg" alt="NIRMA"></div>
+                <div class="admission-card"><img src="images/Engineering/NIRMA5.jpg" alt="NIRMA"></div>
+                <div class="admission-card"><img src="images/Engineering/NIRMA6.jpg" alt="NIRMA"></div>
+                <div class="admission-card"><img src="images/Engineering/NIRMA8.jpg" alt="NIRMA"></div>
+                <div class="admission-card"><img src="images/Engineering/NIRMA9.jpg" alt="NIRMA"></div>
+                <div class="admission-card"><img src="images/Engineering/NIRMA10.jpg" alt="NIRMA"></div>
+        
+                <!-- PDPU -->
+                <div class="admission-card"><img src="images/Engineering/PDPU1.jpg" alt="PDPU"></div>
+                <div class="admission-card"><img src="images/Engineering/PDPU2.jpg" alt="PDPU"></div>
+                <div class="admission-card"><img src="images/Engineering/PDPU3.jpg" alt="PDPU"></div>
+                <div class="admission-card"><img src="images/Engineering/PDPU4.jpg" alt="PDPU"></div>
+                <div class="admission-card"><img src="images/Engineering/PDPU5.jpg" alt="PDPU"></div>
+        
+                <!-- DDU -->
+                <div class="admission-card"><img src="images/Engineering/DDU1.jpg" alt="DDU"></div>
+                <div class="admission-card"><img src="images/Engineering/DDU2.jpg" alt="DDU"></div>
+                <div class="admission-card"><img src="images/Engineering/DDU3.jpg" alt="DDU"></div>
+                <div class="admission-card"><img src="images/Engineering/DDU4.jpg" alt="DDU"></div>
+                <div class="admission-card"><img src="images/Engineering/DDU5.jpg" alt="DDU"></div>
+                <div class="admission-card"><img src="images/Engineering/DDU6.jpg" alt="DDU"></div>
+                <div class="admission-card"><img src="images/Engineering/DDU7.jpg" alt="DDU"></div>
+                <div class="admission-card"><img src="images/Engineering/DDU8.jpg" alt="DDU"></div>
+                <div class="admission-card"><img src="images/Engineering/DDU9.jpg" alt="DDU"></div>
+                <div class="admission-card"><img src="images/Engineering/DDU10.jpg" alt="DDU"></div>
+                <div class="admission-card"><img src="images/Engineering/DDU11.jpg" alt="DDU"></div>
+                <div class="admission-card"><img src="images/Engineering/DDU12.jpg" alt="DDU"></div>
+                <div class="admission-card"><img src="images/Engineering/DDU13.jpg" alt="DDU"></div>
+                <div class="admission-card"><img src="images/Engineering/DDU14.jpg" alt="DDU"></div>
+        
+                <!-- LD -->
+                <div class="admission-card"><img src="images/Engineering/LD1.jpg" alt="LD"></div>
+                <div class="admission-card"><img src="images/Engineering/LD2.jpg" alt="LD"></div>
+                <div class="admission-card"><img src="images/Engineering/LD3.jpg" alt="LD"></div>
+                <div class="admission-card"><img src="images/Engineering/LD4.jpg" alt="LD"></div>
+                <div class="admission-card"><img src="images/Engineering/LD5.jpg" alt="LD"></div>
+                <div class="admission-card"><img src="images/Engineering/LD6.jpg" alt="LD"></div>
+                <div class="admission-card"><img src="images/Engineering/LD7.jpg" alt="LD"></div>
+                <div class="admission-card"><img src="images/Engineering/LD8.jpg" alt="LD"></div>
+                <div class="admission-card"><img src="images/Engineering/LD9.jpg" alt="LD"></div>
+                <div class="admission-card"><img src="images/Engineering/LD10.jpg" alt="LD"></div>
+        
+                <!-- BVM -->
+                <div class="admission-card"><img src="images/Engineering/BVM1.jpg" alt="BVM"></div>
+        
+                <!-- CHARUSAT -->
+                <div class="admission-card"><img src="images/Engineering/CHARUSAT1.jpg" alt="CHARUSAT"></div>
+        
+                <!-- VIT -->
+                <div class="admission-card"><img src="images/Engineering/VIT1.jpg" alt="VIT"></div>
+            </div>
+        </section>
+        
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Purohit Science School. All rights reserved.</p>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
