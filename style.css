@@ -702,6 +702,10 @@ footer {
     padding-top: 150px;
 }
 
+#about1 {
+    padding-top: 150px;
+}
+
 .footer-section {
     text-align: center;
 }
@@ -1001,5 +1005,68 @@ a:hover svg {
     .admission-grid {
         grid-template-columns: repeat(1, 1fr);
         /* 1 per row for mobile */
+    }
+}
+
+/* Grid Layout */
+.admission2-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Force 4 columns */
+    gap: 20px;
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Card Styling */
+.admission2-card {
+    background: linear-gradient(to bottom right, #f9f9f9, #ffffff);
+    border-radius: 15px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    padding: 20px 10px;
+    text-decoration: none;
+    color: var(--primary-color);
+    font-weight: bold;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80px;
+}
+
+.admission2-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 1);
+    /* background: #eef2ff;
+    color: #001a66; */
+}
+
+/* Remove underline on links */
+.admission2-card a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .admission2-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .admission2-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .admission2-grid {
+        grid-template-columns: 1fr;
     }
 }

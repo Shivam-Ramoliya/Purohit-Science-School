@@ -30,6 +30,7 @@
             <ul class="nav-links">
                 <li><a href="#home" class="active">Home</a></li>
                 <li><a href="#about">About</a></li>
+                <li><a href="#people2">Faculties</a></li>
                 <li><a href="#stars">Stars</a></li>
                 <li><a href="#streams">Streams</a></li>
                 <li><a href="#people">People</a></li>
@@ -47,6 +48,7 @@
             <div class="mobile-nav" id="mobile-nav">
                 <a href="#home">Home</a>
                 <a href="#about">About</a>
+                <a href="#people2">Facultues</a>
                 <a href="#stars">Stars</a>
                 <a href="#streams">Streams</a>
                 <a href="#people">People</a>
@@ -55,129 +57,98 @@
         </nav>
     </header>
 
-    <script>
-        function toggleMenu() {
-            const mobileNav = document.getElementById("mobile-nav");
-            mobileNav.classList.toggle("active");
-        }
-
-        // Close menu when clicking on any link inside it
-        document.querySelectorAll("#mobile-nav a").forEach(item => {
-            item.addEventListener("click", () => {
-                document.getElementById("mobile-nav").classList.remove("active");
-            });
-        });
-
-        // Close menu when clicking outside
-        document.addEventListener("click", (event) => {
-            const mobileNav = document.getElementById("mobile-nav");
-            const mobileMenu = document.querySelector(".mobile-menu");
-
-            if (!mobileNav.contains(event.target) && !mobileMenu.contains(event.target)) {
-                mobileNav.classList.remove("active");
-            }
-        });
-    </script>
-
     <main>
         <!-- Hero Section -->
         <section id="home" class="hero">
             <div class="hero-content">
-                <h1 class="hero-title">Welcome!</h1>
-                <p class="hero-subtitle">Unlocking the Wonders of Science</p>
+                <h1 class="hero-title" id="typewriter-title"></h1>
+                <p class="hero-subtitle" id="typewriter-subtitle"></p>
                 <a href="#about" class="cta-button">Explore Now</a>
             </div>
-        </section>        
+        </section>
 
         <!-- About Section -->
         <section id="about" class="section">
-            <h2>About Us</h2>
+            <h2>Heart of Our School</h2>
             <div class="about-content">
                 <div class="about-text">
                     <p>Purohit Science School has been a center of excellence in science education since 1990. We focus
                         on providing quality education with state-of-the-art facilities and experienced faculty.<br><br>
                     </p>
                     <div class="people-grid2">
-                        <div class="people-card3">
+                        <div class="people-card3" data-page="people/about.html">
                             <img src="images/People/PurohitSir1.jpg" alt="Purohit Sir">
                             <h3>Purohit Dushyant Sir<br></h3>
                             <p>M.Sc., B.Ed.<br><br></p>
                             <p><b>Director, </b>Works with "One Team, One Dream" Formula.</p>
                         </div>
                     </div>
-                    <p><br></p>
-                    <div class="about-grid">
-                        <div class="about-card">
-                            <h3><b>Vision</b></h3>
-                            <p>Passion for teaching, confidence of excellence in education and highly motivated for
-                                moulding the all round development of the students. We aim to create benchmark learning
-                                for the future generation.</p>
-                        </div>
-                        <div class="about-card">
-                            <h3><b>Mission</b></h3>
-                            <p>We adopt your child for the bright future to bring out the talent and confidence from
-                                young learner. We promise to deliver 100% from our subject expertise to students and
-                                make them loving, caring and resposible citizens.</p>
-                        </div>
-                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- People2 Section -->
+        <section id="people2" class="section">
+            <h2>Meet Our Superstar Faculties</h2>
+            <div class="people-grid">
+                <div class="people-card" data-page="people/faculty.html">
+                    <img src="images/utilities/faculty-icon.jpg" alt="Faculty">
+                    <h3>Faculty</h3>
+                    <p>Explore our experienced faculty members.</p>
                 </div>
             </div>
         </section>
 
         <!-- Stars Section -->
         <section id="stars" class="section">
-            <h2>Our Stars</h2>
+            <h2>Our Glorious History</h2>
             <div class="stars-grid">
-                <div class="star-card" data-page="grpA.html">
+                <div class="star-card" data-page="stars/grpA/grpA.html">
                     <img src="images/utilities/grpA.jpg" alt="Group A Students">
                     <h3>Group A (PCM)</h3>
                     <p>Explore the achievements of our brilliant Students in Engineering Field.</p>
                 </div>
-                <div class="star-card" data-page="grpB.html">
+                <div class="star-card" data-page="stars/grpB/grpB.html">
                     <img src="images/utilities/grpB.jpg" alt="Group B Students">
                     <h3>Group B (PCB)</h3>
                     <p>Explore the achievements of our brilliant Students in Medical Field.</p>
                 </div>
             </div>
-        </section>               
+        </section>
 
         <!-- Streams Section -->
         <section id="streams" class="section">
             <h2>Academic Streams</h2>
             <div class="streams-grid">
-                <a href="lkg-10.html" class="stream-card">
+                <a href="facilities/lkg-10.html" class="stream-card">
                     <h3><b>L.K.G. to <br> Std. 10th</b></h3>
                 </a>
-        
-                <a href="science.html" class="stream-card">
+
+                <a href="facilities/science.html" class="stream-card">
                     <h3><b>11th & 12th Science</b></h3>
                 </a>
-        
-                <a href="commerce.html" class="stream-card">
+
+                <a href="facilities/commerce.html" class="stream-card">
                     <h3><b>11th & 12th Commerce</b></h3>
                 </a>
-        
-                <a href="foundation.html" class="stream-card">
+
+                <a href="facilities/foundation.html" class="stream-card">
                     <h3><b>Foundation Course</b></h3>
                 </a>
             </div>
-        </section>        
+        </section>
 
         <!-- People Section -->
         <section id="people" class="section">
             <h2>Meet Our People</h2>
             <div class="people-grid">
-                <div class="people-card" data-page="staff.html">
+                <div class="people-card" data-page="people/staff.html">
                     <img src="images/utilities/staff-icon.jpeg" alt="Staff">
                     <h3>Staff</h3>
                     <p>Meet our dedicated administrative and support team.</p>
                 </div>
-                <div class="people-card" data-page="faculty.html">
-                    <img src="images/utilities/faculty-icon.jpg" alt="Faculty">
-                    <h3>Faculty</h3>
-                    <p>Explore our experienced faculty members.</p>
-                </div>
-                <div class="people-card" data-page="developers.html">
+                <div class="people-card" data-page="people/developers.html">
                     <img src="images/utilities/Developers.jpg" alt="Developers">
                     <h3>Developers</h3>
                     <p>Meet Our Facinating Developers.</p>
@@ -328,66 +299,6 @@
         </div>
     </footer>
 
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const hour = new Date().getHours();
-
-            let titleText = "";
-            let subtitleText = "";
-
-            if (hour < 12 && hour >= 6) {
-                titleText = "Good Morning! Welcome to Purohit Science School.";
-                subtitleText = "Start Your Day with Knowledge.";
-            } else if (hour < 18 && hour >= 12) {
-                titleText = "Good Afternoon! Keep Exploring Knowledge.";
-                subtitleText = "Discover, Learn, and Innovate.";
-            } else if (hour < 20 && hour >= 18) {
-                titleText = "Good Evening! Keep Exploring Big.";
-                subtitleText = "Knowledge Never Gets Tired, and Neither Do We.";
-            } else {
-                titleText = "Good Night! Keep Dreaming Big.";
-                subtitleText = "Knowledge Never Sleeps, and Neither Do We.";
-            }
-
-            const titleElement = document.querySelector(".hero-title");
-            if (titleElement) titleElement.innerHTML = "";
-
-            let j = 0;
-
-            function type() {
-
-                if (titleElement && j < titleText.length) {
-                    titleElement.innerHTML += titleText.charAt(j);
-                    j++;
-                    setTimeout(type, 50);
-                }
-            }
-
-            const subtitleElement = document.querySelector(".hero-subtitle");
-
-            if (subtitleElement) subtitleElement.innerHTML = "";
-
-            let i = 0;
-
-            function typeWriterEffect() {
-
-                if (subtitleElement && i < subtitleText.length) {
-                    subtitleElement.innerHTML += subtitleText.charAt(i);
-                    i++;
-                    setTimeout(typeWriterEffect, 75);
-                } else {
-                    setTimeout(() => {
-                        if (subtitleElement) subtitleElement.innerHTML = "";
-                        i = 0;
-                        typeWriterEffect();
-                    }, 1000);
-                }
-            }
-
-            type();
-            typeWriterEffect();
-        });
-    </script>
     <script src="main.js"></script>
 </body>
 
